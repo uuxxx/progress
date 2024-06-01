@@ -14,7 +14,7 @@ import styles from "./styles.js";
  * @property {number} size
  * @property {string} stroke_width
  * @property {string} bg_color
- * @property {string} fg_color
+ * @property {string} progressbar_color
  */
 
 /**
@@ -44,7 +44,7 @@ const DEFAULT_CONFIG = {
   size: 250,
   stroke_width: "20px",
   bg_color: "#ddd",
-  fg_color: "#5394fd",
+  progressbar_color: "#5394fd",
 };
 
 export default class ProgressComponent {

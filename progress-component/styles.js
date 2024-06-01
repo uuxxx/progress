@@ -2,8 +2,8 @@ export default `
   .circular-progress {
     --half-size: calc(var(--size) / 2);
     --radius: calc((var(--size) - var(--stroke-width)) / 2);
-    --circumference: calc(var(--radius) * 3.14 * 2);
-    --dash: calc((var(--progress) * var(--circumference)) / 100);
+    --circle-length: calc(var(--radius) * 3.14 * 2);
+    --dash: calc((var(--progress) * var(--circle-length)) / 100);
   }
 
   .circular-progress circle {
@@ -25,11 +25,11 @@ export default `
     -webkit-transform-origin: var(--half-size) var(--half-size);
     -ms-transform-origin: var(--half-size) var(--half-size);
     transform-origin: var(--half-size) var(--half-size);
-    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    stroke-dasharray: var(--dash) calc(var(--circle-length) - var(--dash));
     -webkit-transition: stroke-dasharray 0.3s linear 0s;
     -o-transition: stroke-dasharray 0.3s linear 0s;
     transition: stroke-dasharray 0.3s linear 0s;
-    stroke: var(--fg-color);
+    stroke: var(--progressbar-color);
   }
 
   .animated {
