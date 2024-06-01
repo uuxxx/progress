@@ -1,0 +1,114 @@
+@import url("./reset.css");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+@media (min-width: 568px), (orientation: landscape) {
+  .content {
+    flex-direction: row;
+  }
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  input {
+    width: 60px;
+    height: 34px;
+  }
+
+  .label {
+    font-size: 20px;
+  }
+}
+
+.controls_item {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+#progress_value {
+  width: 60px;
+  height: 32px;
+  font-size: inherit;
+  outline: none;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 32px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #5394fd;
+}
+
+input:checked + .slider:before {
+  transform: translateX(28px);
+}

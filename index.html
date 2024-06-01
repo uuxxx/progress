@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Progress</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Progress</h1>
+    </header>
+    <main class="content">
+      <div id="progress"></div>
+
+      <div class="controls">
+        <div class="controls_item">
+          <input
+            id="progress_value"
+            autocomplete="off"
+            type="number"
+            min="0"
+            max="100"
+          />
+          <label class="label" for="progress_value">Value</label>
+        </div>
+
+        <div class="controls_item">
+          <label class="toggle">
+            <input id="progress_animate" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+
+          <span class="label">Animate</span>
+        </div>
+
+        <div class="controls_item">
+          <label class="toggle">
+            <input id="progress_hide" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+
+          <span class="label">Hide</span>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
