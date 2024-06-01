@@ -1,4 +1,5 @@
 import EventEmitter from "./EventEmitter.js";
+import styles from "./styles.js";
 
 /**
  * @typedef State
@@ -120,7 +121,7 @@ export default class ProgressComponent {
     this.#defineCssVars(div, this.config);
 
     div.attachShadow({ mode: "open" }).innerHTML = ` 
-      <link rel="stylesheet"  href="progress-component/styles.css" />
+      <style>${styles}</style>
       <svg
         width="${size}"
         height="${size}"
