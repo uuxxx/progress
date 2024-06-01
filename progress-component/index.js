@@ -147,11 +147,11 @@ export default class ProgressComponent {
   }
 
   #offAnimation() {
-    this.$fg.style.animation = "none";
+    this.$fg.classList.remove("animated");
   }
 
   #onAnimation() {
-    this.$fg.style.animation = "rotation 3s linear infinite";
+    this.$fg.classList.add("animated");
   }
 
   #show() {
@@ -190,7 +190,7 @@ export default class ProgressComponent {
   }
 
   getConfig() {
-    return Object.freeze({ ...this.config });
+    return { ...this.config };
   }
 
   get subscribeOnConfigChange() {

@@ -32,6 +32,11 @@ export default `
     stroke: var(--fg-color);
   }
 
+  .animated {
+    animation: rotation 3s linear infinite;
+  }
+
+
   @-webkit-keyframes rotation {
     from {
       -webkit-transform: rotate(-90deg);
